@@ -1,0 +1,37 @@
+{
+  "name": "koa-accesslog",
+  "version": "0.0.1",
+  "description": "Middleware for common log format access logs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/lib/accesslog.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koajs/accesslog"
+  },
+  "keywords": [
+    "common",
+    "log",
+    "format",
+    "access",
+    "logs",
+    "middleware",
+    "koa"
+  ],
+  "author": "Christoffer Hallas <christoffer.hallas@icloud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koajs/accesslog/issues"
+  },
+  "homepage": "https://github.com/koajs/accesslog",
+  "dependencies": {
+    "moment": "^2.8.4"
+  },
+  "devDependencies": {
+    "co-mocha": "^1.1.0",
+    "koa": "^0.13.0",
+    "mocha": "^2.0.1",
+    "supertest": "^0.15.0"
+  }
+}
