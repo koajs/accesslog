@@ -4,7 +4,7 @@
   "description": "Middleware for common log format access logs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/lib/accesslog.js"
+    "test": "./node_modules/.bin/mocha --harmony --no-exit --require co-mocha test/lib/accesslog.test.js"
   },
   "repository": {
     "type": "git",
