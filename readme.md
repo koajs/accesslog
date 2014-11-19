@@ -1,6 +1,6 @@
 # Accesslog
 
-Output common log format access logs to any stream. Defaults to `process.stdout`.
+Output [Common Log Format](http://en.wikipedia.org/wiki/Common_Log_Format) access logs to any stream. Defaults to `process.stdout`.
 
 ## Install
 
@@ -17,6 +17,12 @@ var app = koa();
 
 app.use(accesslog());
 
+```
+
+## Output
+
+```
+127.0.0.1 - - [19/Nov/2014:13:47:37 +0100] "GET / HTTP/1.X", 404 -
 ```
 
 ## Configure
