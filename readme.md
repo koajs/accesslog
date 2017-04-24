@@ -11,9 +11,9 @@ npm install koa-accesslog
 ## Usage
 
 ```js
-var koa = require('koa');
+var Koa = require('koa');
 var accesslog = require('koa-accesslog');
-var app = koa();
+var app = new Koa();
 
 app.use(accesslog());
 

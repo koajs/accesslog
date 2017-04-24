@@ -1,6 +1,6 @@
 {
   "name": "koa-accesslog",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Middleware for common log format access logs",
   "main": "index.js",
   "engines": {
