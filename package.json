@@ -1,10 +1,13 @@
 {
   "name": "koa-accesslog",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Middleware for common log format access logs",
   "main": "index.js",
+  "engines": {
+    "node": ">=7"
+  },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --harmony --no-exit --require co-mocha test/lib/accesslog.test.js"
+    "test": "./node_modules/.bin/mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -26,12 +29,11 @@
   },
   "homepage": "https://github.com/koajs/accesslog",
   "dependencies": {
-    "moment": "^2.8.4"
+    "moment": "^2.18.1"
   },
   "devDependencies": {
-    "co-mocha": "^1.1.0",
-    "koa": "^0.13.0",
-    "mocha": "^2.0.1",
-    "supertest": "^0.15.0"
+    "koa": "^2.2.0",
+    "mocha": "^3.3.0",
+    "supertest": "^3.0.0"
   }
 }
