@@ -2,7 +2,7 @@ const assert = require('assert');
 const stream = require('stream');
 const Koa = require('koa');
 const request = require('supertest');
-const accesslog = require('.');
+const accesslog = require('..');
 
 const app = new Koa();
 const log = new stream.PassThrough();
