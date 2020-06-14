@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "xo",
     "pretest": "npm run lint",
-    "test": "mocha index.spec.js",
+    "test": "mocha",
     "precoverage": "rimraf .nyc_output coverage",
     "coverage": "nyc npm run test",
     "preci": "echo start CI ........",
@@ -53,7 +53,7 @@
       "xo-lass"
     ],
     "ignore": [
-      "index.spec.js"
+      "test"
     ],
     "rules": {
       "node/no-deprecated-api": "off",
