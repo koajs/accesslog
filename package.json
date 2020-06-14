@@ -1,0 +1,72 @@
+{
+  "name": "koa-accesslog",
+  "version": "0.0.2",
+  "description": "Middleware for common log format access logs",
+  "main": "index.js",
+  "scripts": {
+    "lint": "xo",
+    "pretest": "npm run lint",
+    "test": "mocha index.spec.js",
+    "precoverage": "rimraf .nyc_output coverage",
+    "coverage": "nyc npm run test",
+    "preci": "echo start CI ........",
+    "ci": "npm run coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koajs/accesslog"
+  },
+  "keywords": [
+    "common",
+    "log",
+    "format",
+    "access",
+    "logs",
+    "middleware",
+    "koa"
+  ],
+  "author": "Christoffer Hallas <christoffer.hallas@icloud.com>",
+  "contributors": [
+    "3imed-jaberi <imed_jebari@hotmail.fr> (https://www.3imed-jaberi.com)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.26.0"
+  },
+  "devDependencies": {
+    "eslint-config-xo-lass": "^1.0.3",
+    "koa": "^2.12.1",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "supertest": "^4.0.2",
+    "xo": "^0.32.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-lass"
+    ],
+    "ignore": [
+      "index.spec.js"
+    ],
+    "rules": {
+      "node/no-deprecated-api": "off",
+      "no-unused-vars": "off",
+      "no-prototype-builtins": "off",
+      "prefer-rest-params": "off"
+    }
+  },
+  "engines": {
+    "node": ">= 10"
+  },  
+  "homepage": "https://github.com/koajs/accesslog",
+  "bugs": {
+    "url": "https://github.com/koajs/accesslog/issues"
+  }
+}
