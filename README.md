@@ -39,4 +39,4 @@ app.use(accesslog(log));
 
 ## License
 
-MIT
+[MIT](LICENSE)
