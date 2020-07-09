@@ -1,22 +1,24 @@
-# Accesslog
+# [Accesslog](https://github.com/koajs/accesslog)
 
 Output [Common Log Format](http://en.wikipedia.org/wiki/Common_Log_Format) access logs to any stream. Defaults to `process.stdout`.
 
 ## Install
 
-```
-npm install koa-accesslog
+```bash
+# npm ..
+npm i koa-accesslog
+# yarn ..
+yarn add koa-accesslog
 ```
 
 ## Usage
 
 ```js
-var koa = require('koa');
-var accesslog = require('koa-accesslog');
-var app = koa();
+const Koa = require('koa');
+const accesslog = require('koa-accesslog');
+const app = new Koa();
 
 app.use(accesslog());
-
 ```
 
 ## Output
@@ -31,10 +33,10 @@ You may configure Accesslog to use any writable stream such as an
 instance of `stream.PassThrough` as seen below.
 
 ```js
-var log = new stream.PassThrough();
+const log = new stream.PassThrough();
 app.use(accesslog(log));
 ```
 
 ## License
 
-MIT
+[MIT](LICENSE)
