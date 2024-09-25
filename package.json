@@ -64,7 +64,7 @@
   },
   "engines": {
     "node": ">= 10"
-  },  
+  },
   "homepage": "https://github.com/koajs/accesslog",
   "bugs": {
     "url": "https://github.com/koajs/accesslog/issues"
