@@ -26,11 +26,7 @@ jobs:
     - run: npm ci
     - run: npm run lint
     - run: npm test -- --coverage --maxWorkers 2
-    - run: npx codecov
-      # FIXME: codecov package is deprecated in favor of other solutions.
-      # See:
-      # - https://github.com/marketplace/actions/codecov
-      # - https://about.codecov.io/blog/codecov-uploader-deprecation-plan/ 
-      # - https://www.npmjs.com/package/codecov 
-      if: false
-      continue-on-error: true
+    - name: Upload results to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
