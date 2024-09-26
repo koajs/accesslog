@@ -1,5 +1,5 @@
 const util = require('util');
-const moment = require('moment');
+const { toCommonAccessLogDateFormat } = require('./format');
 
 module.exports = function (stream) {
   if (!stream) stream = process.stdout;
@@ -13,7 +13,7 @@ module.exports = function (stream) {
 
     // eslint-disable-next-line unicorn/explicit-length-check
     const length = ctx.length ? ctx.length.toString() : '-';
-    const date = moment().format('D/MMM/YYYY:HH:mm:ss ZZ');
+    const date = toCommonAccessLogDateFormat(new Date());
 
     stream.write(
       util.format(

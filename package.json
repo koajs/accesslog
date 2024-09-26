@@ -5,12 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "xo",
-    "pretest": "npm run lint",
-    "test": "mocha",
-    "precoverage": "rimraf .nyc_output coverage",
-    "coverage": "nyc npm run test",
-    "preci": "echo start CI ........",
-    "ci": "npm run coverage"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -30,14 +25,10 @@
     "3imed-jaberi <imed_jebari@hotmail.fr> (https://www.3imed-jaberi.com)"
   ],
   "license": "MIT",
-  "dependencies": {
-    "moment": "^2.26.0"
-  },
   "devDependencies": {
     "eslint-config-xo-lass": "^1.0.3",
+    "jest": "^29.7.0",
     "koa": "^2.12.1",
-    "mocha": "^8.0.1",
-    "nyc": "^15.1.0",
     "supertest": "^4.0.2",
     "xo": "^0.32.0"
   },
@@ -63,8 +54,8 @@
     }
   },
   "engines": {
-    "node": ">= 10"
-  },  
+    "node": ">= 18"
+  },
   "homepage": "https://github.com/koajs/accesslog",
   "bugs": {
     "url": "https://github.com/koajs/accesslog/issues"
