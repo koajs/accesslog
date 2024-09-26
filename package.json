@@ -30,9 +30,6 @@
     "3imed-jaberi <imed_jebari@hotmail.fr> (https://www.3imed-jaberi.com)"
   ],
   "license": "MIT",
-  "dependencies": {
-    "moment": "^2.26.0"
-  },
   "devDependencies": {
     "eslint-config-xo-lass": "^1.0.3",
     "koa": "^2.12.1",
