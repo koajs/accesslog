@@ -15,12 +15,12 @@ describe('lib accesslog', function () {
   let agent;
   let server;
 
-  before(function (done) {
+  beforeAll(function (done) {
     server = app.listen(done);
     agent = request.agent(server);
   });
 
-  after(function () {
+  afterAll(function () {
     server.close();
   });
 
