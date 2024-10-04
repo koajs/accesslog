@@ -5,7 +5,7 @@
 Thumbs.db
 tmp/
 temp/
-
+dist/
 
 #     Node.js     #
 ###################
