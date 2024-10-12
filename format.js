@@ -68,7 +68,7 @@ function toOffset(offsetMinutes) {
   const absoluteOffset = Math.abs(offsetMinutes);
   const hours = toTwoDigits(Math.floor(absoluteOffset / 60));
   const minutes = toTwoDigits(absoluteOffset % 60);
-  const sign = offsetMinutes >= 0 ? '-' : '+';
+  const sign = offsetMinutes > 0 ? '-' : '+';
 
   return `${sign}${hours}${minutes}`;
 }
