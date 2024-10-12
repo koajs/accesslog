@@ -67,6 +67,7 @@
   },
   "files": [
     "dist",
+    "format.js",
     "index.js"
   ],
   "engines": {
