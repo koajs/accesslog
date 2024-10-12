@@ -3,6 +3,17 @@
   "version": "0.0.2",
   "description": "Middleware for common log format access logs",
   "main": "index.js",
+  "files": [
+    "format.js",
+    "index.js",
+    "index.mjs"
+  ],
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.mjs"
+    }
+  },
   "scripts": {
     "lint": "xo",
     "test": "jest"
@@ -22,7 +33,7 @@
   ],
   "author": "Christoffer Hallas <christoffer.hallas@icloud.com>",
   "contributors": [
-    "3imed-jaberi <imed_jebari@hotmail.fr> (https://www.3imed-jaberi.com)"
+    "3imed-jaberi <imed.jaberi@outlook.com> (https://www.3imed-jaberi.com)"
   ],
   "license": "MIT",
   "devDependencies": {
