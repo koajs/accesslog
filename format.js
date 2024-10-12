@@ -9,7 +9,7 @@ const util = require('util');
  * @returns A two-digit number
  * @throws {TypeError} if the provided value is not a valid integer
  */
-function formatTwoDigits(number) {
+function toTwoDigits(number) {
   if (!Number.isInteger(number)) {
     throw new TypeError(`Not a valid integer: ${number}`);
   }
@@ -26,7 +26,7 @@ function formatTwoDigits(number) {
  * @returns {string}
  * @throws {TypeError} if the provided value is not a valid month number
  */
-function formatShortMonth(month) {
+function toShortMonth(month) {
   switch (month) {
     // Note: January is month 0!
     case 0:
@@ -65,14 +65,14 @@ function formatShortMonth(month) {
  * @returns {string}
  * @throws {TypeError} if the provided value is not a valid integer
  */
-function formatOffset(offsetMinutes) {
+function toOffset(offsetMinutes) {
   if (!Number.isInteger(offsetMinutes)) {
     throw new TypeError(`Not a valid integer: ${offsetMinutes}`);
   }
 
   const absoluteOffset = Math.abs(offsetMinutes);
-  const hours = formatTwoDigits(Math.floor(absoluteOffset / 60));
-  const minutes = formatTwoDigits(absoluteOffset % 60);
+  const hours = toTwoDigits(Math.floor(absoluteOffset / 60));
+  const minutes = toTwoDigits(absoluteOffset % 60);
   const sign = offsetMinutes >= 0 ? '-' : '+';
 
   return `${sign}${hours}${minutes}`;
@@ -85,7 +85,7 @@ function formatOffset(offsetMinutes) {
  * @param {Date} date
  * @returns {string}
  */
-function formatCommonAccessLogDate(date) {
+function toCommonAccessLogDateFormat(date) {
   if (!(date instanceof Date)) {
     throw new TypeError('Not a valid date');
   }
@@ -93,19 +93,19 @@ function formatCommonAccessLogDate(date) {
   // e.g: 10/Oct/2000:13:55:36 -0700
   return util.format(
     '%s/%s/%s:%s:%s:%s %s',
-    formatTwoDigits(date.getDate()),
-    formatShortMonth(date.getMonth()),
+    toTwoDigits(date.getDate()),
+    toShortMonth(date.getMonth()),
     date.getFullYear(),
-    formatTwoDigits(date.getHours()),
-    formatTwoDigits(date.getMinutes()),
-    formatTwoDigits(date.getSeconds()),
-    formatOffset(date.getTimezoneOffset())
+    toTwoDigits(date.getHours()),
+    toTwoDigits(date.getMinutes()),
+    toTwoDigits(date.getSeconds()),
+    toOffset(date.getTimezoneOffset())
   );
 }
 
 module.exports = {
-  formatCommonAccessLogDate,
-  formatOffset,
-  formatShortMonth,
-  formatTwoDigits
+  toCommonAccessLogDateFormat,
+  toOffset,
+  toShortMonth,
+  toTwoDigits
 };
