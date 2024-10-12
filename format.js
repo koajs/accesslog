@@ -18,42 +18,39 @@ function toTwoDigits(number) {
 }
 
 /**
+ * Look-up map of month number into month short name (in english).
+ * A month number is the value returned by Date#getMonth() and a short month name
+ * is a 3 letter representation of a month of the year.
+ */
+const shortMonthByMonthNumber = {
+  0: 'Jan',
+  1: 'Feb',
+  2: 'Mar',
+  3: 'Apr',
+  4: 'May',
+  5: 'Jun',
+  6: 'Jul',
+  7: 'Aug',
+  8: 'Sep',
+  9: 'Oct',
+  10: 'Nov',
+  11: 'Dec'
+};
+
+/**
  * Returns a [short](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#month)
  * (3-letters) representation of the given month index **in English**.
+ *
  * @param {number} month
  * @returns {string}
  * @throws {TypeError} if the provided value is not a valid month number
  */
 function toShortMonth(month) {
-  switch (month) {
-    // Note: January is month 0!
-    case 0:
-      return 'Jan';
-    case 1:
-      return 'Feb';
-    case 2:
-      return 'Mar';
-    case 3:
-      return 'Apr';
-    case 4:
-      return 'May';
-    case 5:
-      return 'Jun';
-    case 6:
-      return 'Jul';
-    case 7:
-      return 'Aug';
-    case 8:
-      return 'Sep';
-    case 9:
-      return 'Oct';
-    case 10:
-      return 'Nov';
-    case 11:
-      return 'Dec';
-    default:
-      throw new TypeError(`Not a valid month value: ${month}`);
+  if (month in shortMonthByMonthNumber) {
+    throw new TypeError(`Not a valid month value: ${month}`);
   }
+
+  return shortMonthByMonthNumber[month];
 }
 
 /**
