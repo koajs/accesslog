@@ -14,9 +14,7 @@ function toTwoDigits(number) {
     throw new TypeError(`Not a valid integer: ${number}`);
   }
 
-  const n = String(number);
-
-  return n.padStart(2, '0');
+  return number.toString().padStart(2, '0');
 }
 
 /**
