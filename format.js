@@ -46,7 +46,7 @@ const shortMonthByMonthNumber = {
  * @throws {TypeError} if the provided value is not a valid month number
  */
 function toShortMonth(month) {
-  if (month in shortMonthByMonthNumber) {
+  if (!(month in shortMonthByMonthNumber)) {
     throw new TypeError(`Not a valid month value: ${month}`);
   }
 
