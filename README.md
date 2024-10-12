@@ -2,6 +2,8 @@
 
 Output [Common Log Format](http://en.wikipedia.org/wiki/Common_Log_Format) access logs to any stream. Defaults to `process.stdout`.
 
+> Notice: We recommend using `@koa/access-log` for installation, as both `koa-accesslog` and `@koa/access-log` refer to the same module. However, in our next major version bump (v2), we will deprecate `koa-accesslog` and only maintain `@koa/access-log`.
+
 ## Install
 
 ```bash
@@ -11,11 +13,22 @@ npm i koa-accesslog
 yarn add koa-accesslog
 ```
 
+or
+
+```bash
+# npm ..
+npm i @koa/access-log
+# yarn ..
+yarn add @koa/access-log
+```
+
 ## Usage
 
 ```js
 const Koa = require('koa');
 const accesslog = require('koa-accesslog');
+// or
+// const accesslog = require('@koa/access-log');
 const app = new Koa();
 
 app.use(accesslog());
